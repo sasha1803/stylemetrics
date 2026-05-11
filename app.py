@@ -22,7 +22,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-BASE = os.path.expanduser('~/Documents/StyleMetrics/data/')
+BASE = 'data/'
 
 @st.cache_data
 def load_data():
