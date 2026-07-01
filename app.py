@@ -101,7 +101,7 @@ elif page == "Competitor Intelligence":
             competitors.sort_values('engagement_rate', ascending=True),
             x='engagement_rate', y='brand', orientation='h',
             color='top_content',
-            color_discrete_sequence=[DARK, ROSE, PURPLE, SAGE],
+            color_discrete_sequence=['#D4A5A5', '#A8C5DA', '#C3B8D8', '#A8D5B5'],
             title="Engagement Rate by Brand",
             text='engagement_rate'
         )
@@ -118,7 +118,7 @@ elif page == "Competitor Intelligence":
     with col2:
         content_counts = competitors['top_content'].value_counts().reset_index()
         content_counts.columns = ['format','count']
-        fig2 = px.pie(content_counts, values='count', names='format', title="Content Format Distribution", color_discrete_sequence=[DARK, ROSE, PURPLE, SAGE], hole=0.4)
+        fig2 = px.pie(content_counts, values='count', names='format', title="Content Format Distribution", color_discrete_sequence=['#D4A5A5', '#A8C5DA', '#C3B8D8', '#A8D5B5'], hole=0.4)
         fig2.update_layout(font=dict(family='Georgia', color='#1a1a1a', size=12), title_font=dict(size=15, color='#1a1a1a'), legend=dict(font=dict(color='#1a1a1a')), height=420)
         fig2.update_traces(textfont=dict(color='white'))
         st.plotly_chart(fig2, use_container_width=True)
