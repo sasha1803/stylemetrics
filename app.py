@@ -109,7 +109,7 @@ elif page == "Competitor Intelligence":
         fig.update_layout(**CHART_LAYOUT, height=420, showlegend=True)
         fig.update_xaxes(title_text="Engagement Rate %", range=[0, 4])
         fig.update_yaxes(title_text="")
-        fig.update_traces(textposition='top center', )
+        fig.update_traces()
         fig.update_layout(**CHART_LAYOUT, height=420)
         fig.update_xaxes(title_text="Followers")
         fig.update_yaxes(title_text="Engagement Rate %")
