@@ -192,7 +192,7 @@ elif page == "Launch KPI Tracker":
             title={'text': label, 'font': {'size': 13, 'family': 'Georgia', 'color': '#1a1a1a'}},
             number={'suffix': "%", 'font': {'size': 20, 'color': '#1a1a1a'}},
             gauge={'axis': {'range': [0,100], 'tickcolor': '#1a1a1a'}, 'bar': {'color': PURPLE},
-                   'steps': [{'range': [0,50], 'color': '#F8E8E8'}, {'range': [50,80], 'color': '#F0D8F0'}, {'range': [80,100], 'color': '#E0C8E8'}]}
+                   'steps': [{'range': [0,50], 'color': '#E8F5E9'}, {'range': [50,80], 'color': '#FFF3E0'}, {'range': [80,100], 'color': '#FFE0E0'}]}
         ))
         fig.update_layout(height=220, margin=dict(t=40,b=10,l=20,r=20), paper_bgcolor='white', font=dict(color='#1a1a1a'))
         cols[i].plotly_chart(fig, use_container_width=True)
