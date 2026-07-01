@@ -121,6 +121,7 @@ elif page == "Competitor Intelligence":
         fig2 = px.pie(content_counts, values='count', names='format', title="Content Format Distribution", color_discrete_sequence=['#D4A5A5', '#A8C5DA', '#C3B8D8', '#A8D5B5'], hole=0.4)
         fig2.update_layout(font=dict(family='Georgia', color='#1a1a1a', size=12), title_font=dict(size=15, color='#1a1a1a'), legend=dict(font=dict(color='#1a1a1a')), height=420)
         fig2.update_traces(textfont=dict(color='white'))
+        fig2.update_layout(paper_bgcolor='white', plot_bgcolor='white')
         st.plotly_chart(fig2, use_container_width=True)
 
     st.dataframe(competitors[['brand','style','followers','engagement_rate','posts_per_week','top_content']].sort_values('engagement_rate', ascending=False).reset_index(drop=True), use_container_width=True)
@@ -155,6 +156,7 @@ elif page == "Sentiment Analysis":
         fig2 = px.pie(sent_counts, values='count', names='sentiment', title="Overall Sentiment Breakdown", color_discrete_sequence=[SAGE, ROSE, '#F2C4A0'], hole=0.4)
         fig2.update_layout(font=dict(family='Georgia', color='#1a1a1a', size=12), title_font=dict(size=15, color='#1a1a1a'), legend=dict(font=dict(color='#1a1a1a')), height=400)
         fig2.update_traces(textfont=dict(color='#1a1a1a'))
+        fig2.update_layout(paper_bgcolor='white', plot_bgcolor='white')
         st.plotly_chart(fig2, use_container_width=True)
 
     st.markdown("""<div class='insight-box'>
@@ -213,7 +215,7 @@ elif page == "Launch KPI Tracker":
 
 st.markdown("""
 <style>
-[data-baseweb="select"] * { color: white !important; background-color: #333 !important; }
+[data-baseweb="select"] * { color: white !important; background-color: white !important; }
 [data-baseweb="popover"] * { color: #1a1a1a !important; background-color: white !important; }
 [data-baseweb="menu"] li { color: #1a1a1a !important; background-color: white !important; }
 </style>
